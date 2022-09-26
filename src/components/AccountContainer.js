@@ -13,7 +13,7 @@ class AccountContainer extends Component {
   } 
 
   componentDidMount(){
-    fetch('http://localhost:6001/transactions')
+    fetch('http://localhost:8001/transactions')
     .then(r => r.json())
     .then(resp => {
       this.setState({
@@ -23,12 +23,12 @@ class AccountContainer extends Component {
   }
 
 
-  // addTransactionFun = (addTransaction) =>{
-  //   let newTransArr = [...this.state.transactions, addTransaction]
-  //   this.setState({
-  //     transactions: newTransArr
-  //   })
-  // }
+  addTransactionFun = (addTransaction) =>{
+     let newTransArr = [...this.state.transactions, addTransaction]
+    this.setState({
+      transactions: newTransArr
+    })
+   }
   
 
   addTransactionFun = (addTransaction) =>{

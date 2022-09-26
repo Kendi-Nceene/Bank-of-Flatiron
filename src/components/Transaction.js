@@ -1,28 +1,40 @@
 import React from "react";
+import Transaction from "./Transaction";
+import Select from "./Select"
 
-const Transaction = (props) => {
+const TransactionsList = (props) => {
 
-  let {date, description, category, amount} = props.transaction
+  let componentArray = props.transactions.map((transactionObj) => {
+    return <Transaction 
+            key={transactionObj.id} 
+            transaction={transactionObj} 
+            deleteTransactionFun={props.deleteTransactionFun}
+          />
+  })
 
-  let handledelete = (evt) => {
-    fetch(`http://localhost:8001/transactions/${props.transaction.id}`, {
-      method: 'DELETE',
-    })
-    .then(r => r.json())
-    .then(deletedTransaction => {
-      props.deleteTransactionFun(props.transaction)
-    })
-  }
 
   return (
-    <tr>
-      <td>{date}</td>
-      <td>{description}</td>
-      <td>{category}</td>
-      <td>{amount}</td>
-      <td><button onClick={handledelete}>X</button></td> 
-    </tr>
+    <table className="ui celled striped padded table">
+      <tbody>
+        <tr>
+          <th>
+            <h3 className="ui center aligned header">Date</h3>
+          </th>
+          <th>
+            <h3 className="ui center aligned header">Description</h3>
+            < Select select={props.select} selectFun={props.selectFun}/>
+          </th>
+          <th>
+            <h3 className="ui center aligned header">Category</h3>
+          </th>
+          <th>
+            <h3 className="ui center aligned header">Amount</h3>
+          </th>
+        </tr>
+        {componentArray}
+      </tbody>
+    </table>
   );
 };
 
-export default Transaction;
+export default TransactionsList;
