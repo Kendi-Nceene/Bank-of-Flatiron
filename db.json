@@ -83,6 +83,20 @@
       "description": "Venmo, Pay Roommate for Rent",
       "category": "Housing",
       "amount": -975
+    },
+    {
+      "date": "",
+      "description": "",
+      "category": "",
+      "amount": "",
+      "id": 13
+    },
+    {
+      "date": "2020-12-23",
+      "description": "Kendi Lunch",
+      "category": "Food",
+      "amount": "500",
+      "id": 14
     }
   ]
 }
