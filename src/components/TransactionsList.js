@@ -1,6 +1,6 @@
 import React from "react";
 import Transaction from "./Transaction";
-import Select from "./Select"
+//import Select from "./Select"
 
 function TransactionsList({transactions}) {
   const list = transactions.map((item)=>{

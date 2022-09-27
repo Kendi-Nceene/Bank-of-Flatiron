@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 
 const Select = (props) => {
 
@@ -26,4 +26,4 @@ const Select = (props) => {
   )
 }
 
-export default Select;
+export default Select;*/
