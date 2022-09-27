@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 import AccountContainer from "./AccountContainer";
+import "../stylesheets/App.css";
 
 function App() {
   return (

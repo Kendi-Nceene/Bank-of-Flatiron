@@ -1,5 +1,6 @@
 import React from "react";
 import Transaction from "./Transaction";
+import Select from "./Select"
 
 function TransactionsList({transactions}) {
   const list = transactions.map((item)=>{
@@ -13,7 +14,7 @@ function TransactionsList({transactions}) {
             <h3 className="ui center aligned header">Date</h3>
           </th>
           <th>
-            <h3 className="ui center aligned header">Description</h3>
+          <h3 className="ui center aligned header">Description</h3>
           </th>
           <th>
             <h3 className="ui center aligned header">Category</h3>
